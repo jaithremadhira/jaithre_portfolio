@@ -1,57 +1,177 @@
+<!doctype html>
 <html lang="en-GB">
-<a href="#" class="link">Live</a>
-<a href="#" class="link">GitHub</a>
-</div>
-</div>
-</article>
-</div>
-</section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jaithre Madhira — neon-noir portfolio. Clean, fast, and dope." />
+  <title>Jaithre Madhira — Portfolio</title>
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
 
-<section id="contact" class="container contact">
-<h2>Contact</h2>
-<div class="contact-grid card">
-<form id="contactForm" class="contact-form" novalidate>
-<label for="name">Name</label>
-<input id="name" name="name" type="text" required minlength="2">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
 
+  <!-- Avoid theme flash -->
+  <script>document.documentElement.classList.add(localStorage.getItem('theme')||'theme-dark');</script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="dot" aria-hidden="true"></div>
+  </div>
 
-<label for="email">Email</label>
-<input id="email" name="email" type="email" required>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Jaithre<span class="dot-mark">.</span></a>
 
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn" class="btn btn-ghost" aria-label="Toggle theme">🌙</button>
+      </nav>
 
-<label for="message">Message</label>
-<textarea id="message" name="message" rows="6" required minlength="10"></textarea>
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="kicker">Frontend • Designer • Tennis</p>
+          <h1 class="headline">Hey — I’m <span class="accent">Jaithre Madhira</span>.</h1>
+          <p class="lead">I make fast, accessible, and delightfully interactive web experiences. Clean code, striking visuals — built to impress.</p>
 
-<div class="form-actions">
-<button type="submit" class="btn btn-primary">Send message</button>
-<button type="reset" class="btn btn-ghost">Reset</button>
-</div>
-</form>
-<div class="contact-info">
-<p>Prefer email? <a href="mailto:jaithre@example.com">jaithre@example.com</a></p>
-<p>Download CV — <a href="#">PDF</a></p>
-<div class="socials">
-<a href="#">GitHub</a> · <a href="#">LinkedIn</a>
-</div>
-</div>
-</div>
-</section>
-</main>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#projects">See projects</a>
+            <a class="btn btn-outline" href="#contact">Contact</a>
+          </div>
 
+          <div class="skill-pill">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+            <span>Performance</span>
+          </div>
+        </div>
 
-<footer class="site-footer">
-<div class="container footer-inner">
-<small>© <span id="year"></span> Jaithre Madhira — Built with ❤️</small>
-<nav>
-<a href="#">Privacy</a>
-<a href="#">Credits</a>
-</nav>
-</div>
-</footer>
+        <aside class="hero-right card profile-card" aria-hidden="false">
+          <div class="portrait-wrap">
+            <img class="portrait" src="images/portrait.jpg" alt="Portrait of Jaithre">
+            <div class="portrait-glow" aria-hidden="true"></div>
+          </div>
 
+          <ul class="skill-list">
+            <li>Performance-first</li>
+            <li>Accessible UI</li>
+            <li>Design systems</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-<script src="js/main.js" defer></script>
+    <!-- ABOUT -->
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <div class="about-grid card">
+        <div>
+          <p>Computer Science student specialising in front-end & UI design. I turn concepts into responsive, high-performance interfaces that look premium and run smoothly on real devices.</p>
+          <p>Outside code — tennis, beats, and caffeine-fuelled experiments.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat card-sm"><strong>5+</strong><span>Projects</span></div>
+          <div class="stat card-sm"><strong>100%</strong><span>UX Focus</span></div>
+          <div class="stat card-sm"><strong>SRM AP</strong><span>CSE AI</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project card">
+          <img src="images/project-1.png" alt="StyleSage project screenshot">
+          <div class="project-body">
+            <h3>StyleSage</h3>
+            <p>Clothes-styling app — responsive UI & recommendation demo.</p>
+            <div class="project-links">
+              <a href="#" class="link">Live</a>
+              <a href="#" class="link">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card">
+          <img src="images/project-2.png" alt="Tennis Tracker project screenshot">
+          <div class="project-body">
+            <h3>Tennis Tracker</h3>
+            <p>Match & stats tracker using LocalStorage for offline persistence.</p>
+            <div class="project-links">
+              <a href="#" class="link">Live</a>
+              <a href="#" class="link">GitHub</a>
+            </div>
+          </article>
+
+        <article class="project card">
+          <img src="images/project-3.png" alt="Portfolio project screenshot">
+          <div class="project-body">
+            <h3>Portfolio Revamp</h3>
+            <p>This site — minimal, fast and accessible.</p>
+            <div class="project-links">
+              <a href="#" class="link">Live</a>
+              <a href="#" class="link">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <div class="contact-grid card">
+        <form id="contactForm" class="contact-form" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required minlength="2">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required minlength="10"></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+        </form>
+
+        <div class="contact-info">
+          <p>Prefer email? <a href="mailto:jaithre.madhira.s.144@kalvium.community">jaithre.madhira.s.144@kalvium.community</a></p>
+          <p>Download CV — <a href="#">PDF</a></p>
+          <div class="socials">
+            <a href="#">GitHub</a> · <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Jaithre Madhira — Built with ❤️</small>
+      <nav>
+        <a href="#">Privacy</a>
+        <a href="#">Credits</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
